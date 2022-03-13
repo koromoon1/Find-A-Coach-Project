@@ -2,7 +2,7 @@
   <li>
     <h3>{{ fullName }}</h3>
     <h4>${{ rate }}/hour</h4>
-    <h4>id: {{ id }}</h4>
+    <h4>userId: {{ id }}</h4>
     <div>
       <base-badge v-for="area in areas" :key="area" :title="area" :type="area">
       </base-badge>

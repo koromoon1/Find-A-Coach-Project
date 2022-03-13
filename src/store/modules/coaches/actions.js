@@ -44,8 +44,10 @@ export default {
     // Error handling
     // Then check if the response is ok (response has a ok field)
     if (!response.ok) {
-      // error
-      console.log('response is not ok');
+      // error handling
+      const error = new Error(responseData.message || 'Failed to register!');
+      throw error;
+      // ↑ the component dispatching this will ba able to handle this threw error
     }
 
     // After all the aboves are done
