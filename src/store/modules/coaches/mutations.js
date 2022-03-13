@@ -6,4 +6,8 @@ export default {
     // the payload is a list of coaches
     state.coaches = payload;
   },
+  // Record last fetch time
+  setFetchTimeStamp(state) {
+    state.lastFetch = new Date().getTime(); // get current time
+  },
 };

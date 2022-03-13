@@ -59,14 +59,23 @@ export default {
   },
 
   // send request to load data from firebase
-  async loadCoaches(context) {
+  async loadCoaches(context, payload) {
+    // Before fetch, check if should update
+    // !shouldUpdate: allow update every 1 minute
+    // !payload.forceRefresh: from refresh button
+    if (!payload.forceRefresh && !context.getters.shouldUpdate) {
+      console.log('No need to update yet!');
+      return;
+    }
+
+    // fetch all coaches
     const response = await fetch(
       `https://myproject1-b5913-default-rtdb.firebaseio.com/coaches.json`
-    ); // fetch all coaches
+    );
 
     const responseData = await response.json();
-    // console.log(responseData);
 
+    // Error checking
     if (!response.ok) {
       // error handling
       const error = new Error(responseData.message || 'Failed to fetch!');
@@ -76,7 +85,7 @@ export default {
 
     // Formatting coach data
     const coaches = [];
-    // get each coach id
+    // get each coach id(which is the key)
     for (const key in responseData) {
       const coach = {
         id: key,
@@ -89,6 +98,10 @@ export default {
 
       coaches.push(coach);
     }
+
+    // commit to set
     context.commit('setCoaches', coaches);
+    // record fetching time stamp
+    context.commit('setFetchTimeStamp');
   },
 };

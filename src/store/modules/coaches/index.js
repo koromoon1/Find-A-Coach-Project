@@ -6,7 +6,7 @@ export default {
   namespaced: true,
   state() {
     return {
-      // userIsCoach: false,
+      lastFetch: null, // save time stamp when fetch new data
       coaches: [
         {
           id: 'c1',
