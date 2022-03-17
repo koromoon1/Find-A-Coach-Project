@@ -11,9 +11,8 @@ npm install
 npm run serve
 ```
 
-##Functions(for now):
+#### Functions (for now):
 ```
-
 - Without Log in, you can:
   - Log in & Sign Up
   - Check coach list & view their details
