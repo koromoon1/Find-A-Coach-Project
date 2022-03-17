@@ -18,7 +18,7 @@ export default {
 
     // responseData includes a unique generated ID
     const responseData = await response.json();
-    console.log(responseData);
+    // console.log(responseData);
 
     if (!response.ok) {
       // error handling
@@ -41,14 +41,17 @@ export default {
   async fetchRequests(context) {
     // load requests for only the current user
     const coachId = context.rootGetters.userId;
+    // get token by state
+    const token = context.rootGetters.token;
     const response = await fetch(
-      `https://myproject1-b5913-default-rtdb.firebaseio.com/requests/${coachId}.json`
+      `https://myproject1-b5913-default-rtdb.firebaseio.com/requests/${coachId}.json?auth=` +
+        token
     );
     const responseData = await response.json();
 
     if (!response.ok) {
       const error = new Error(
-        responseData.message || 'Failed to send request!'
+        responseData.message || 'Failed to fetch requests.'
       );
       throw error;
     }

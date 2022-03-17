@@ -9,10 +9,14 @@ export default {
       areas: data.areas,
     };
 
+    // get token by state
+    const token = context.rootGetters.token;
+
     // Send data to firebase
     // with fetch function. It take a string url
     const response = await fetch(
-      `https://myproject1-b5913-default-rtdb.firebaseio.com/coaches/${userId}.json`,
+      `https://myproject1-b5913-default-rtdb.firebaseio.com/coaches/${userId}.json?auth=` +
+        token,
       // firebase need to add '.json' at the end
       {
         method: 'PUT', // default is get

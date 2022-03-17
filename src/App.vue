@@ -16,6 +16,24 @@
 import TheHeader from './components/layout/TheHeader.vue';
 export default {
   components: { TheHeader },
+  // When app created, try to log in depend on the information in local storage
+  created() {
+    this.$store.dispatch('tryLogin');
+  },
+  computed: {
+    // get didAutoLogout value
+    didAutoLogout() {
+      return this.$store.getters.didAutoLogout;
+    },
+  },
+  watch: {
+    // When didAutoLogout is true and its value has changed, redirect user to coaches page
+    didAutoLogout(curValue, oldValue) {
+      if (curValue && curValue !== oldValue) {
+        this.$router.replace('/coaches');
+      }
+    },
+  },
 };
 </script>
 
