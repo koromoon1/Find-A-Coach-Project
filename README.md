@@ -1,5 +1,15 @@
 # Find-A-Coach-Project
-A Vue3 Project built with tutorial. (Firebase, Vuex, VueRouter)
+A Vue3 Project built with Vue3, Vuex, VueRouter, Firebase
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
 Functions(for now):
 
