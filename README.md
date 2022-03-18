@@ -24,3 +24,4 @@ npm run serve
   - Check your requests
   - Register as a Coach if you haven't being one
   - Log out
+  - (the log in status will be stored in the local sotrage until the token expired or logged out.)
