@@ -12,7 +12,7 @@ npm run serve
 ```
 
 Features:
-```
+
 - Without Log in, you can:
   - Log in & Sign Up
   - Check coach list & view their details
