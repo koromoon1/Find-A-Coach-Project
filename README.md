@@ -1,8 +1,6 @@
 # Find-A-Coach-Project
 A Vue3 Project built with Vue3, Vuex, VueRouter, Firebase
 
-:rofl:
-
 ## Project setup
 ```
 npm install
@@ -13,7 +11,7 @@ npm install
 npm run serve
 ```
 
-#### Functions (for now):
+Features:
 ```
 - Without Log in, you can:
   - Log in & Sign Up
