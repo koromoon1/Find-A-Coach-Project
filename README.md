@@ -30,3 +30,5 @@ npm run serve
   - optimized with lazy load
   - navigation animation by CSS & Vue animation
   - Error Modal for fetching data from database (it will be a problem if you can see it :sweat_smile: Contact me if you see :rofl:)
+
+:smiley:
