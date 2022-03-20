@@ -1,16 +1,6 @@
 # Find-A-Coach-Project
 A Vue3 Project built with Vue3, Vuex, VueRouter, Firebase
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
 Features:
 
 - Without Log in, you can:
@@ -31,4 +21,14 @@ Features:
   - navigation animation by CSS & Vue animation
   - Error Modal for fetching data from database (it will be a problem if you can see it :sweat_smile: Contact me if you see :rofl:)
 
-:smiley:
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+
