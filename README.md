@@ -25,3 +25,8 @@ npm run serve
   - Register as a Coach if you haven't being one
   - Log out
   - (the log in status will be stored in the local sotrage until the token expired or logged out.)
+
+- Others
+  - optimized with lazy load
+  - navigation animation by CSS & Vue animation
+  - Error Modal for fetching data from database (it will be a problem if you can see it :sweat_smile: Contact me if you see :rofl:)
